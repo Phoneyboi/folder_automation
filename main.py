@@ -1,6 +1,10 @@
 from naming_conventions import sequential_numbering
+from dotenv import load_dotenv
+import os
 
-full_folder_path = r"C:\Users\helbi\MRLabs\Solidworks_Files\MRL_SWPY\content"
+load_dotenv()
+
+full_folder_path = os.getenv('FULL_FOLDER_PATH')
 
 if __name__ == '__main__':
     sequential_numbering(full_folder_path)
